@@ -1,0 +1,29 @@
+{
+  "name": "youtube",
+  "version": "0.0.0",
+  "main": "lib/youtube.js",
+  "description": "The best module ever.",
+  "homepage": "https://github.com//youtube",
+  "bugs": "https://github.com//youtube/issues",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//youtube"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.0",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.0",
+    "jshint-stylish": "~0.1.3"
+  }
+}
