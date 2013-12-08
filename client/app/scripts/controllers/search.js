@@ -7,6 +7,7 @@ angular.module('clientApp')
         console.log('Searching for: '+$scope.searchTerm);
         ApiService.search($scope.searchTerm)
             .success(function(data){
+                $scope.videoItems = [];
                 angular.forEach(data.items, function(item){
                     console.log(item);
                     $scope.videoItems.push(item);

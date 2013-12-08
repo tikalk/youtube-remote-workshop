@@ -16,6 +16,10 @@ angular.module('clientApp', [
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl'
       })
+      .when('/youtube-player', {
+        templateUrl: 'views/youtube-player.html',
+        controller: 'YoutubePlayerCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

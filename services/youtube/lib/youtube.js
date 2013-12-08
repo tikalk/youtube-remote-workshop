@@ -13,6 +13,8 @@ module.exports = function (config) {
 
     return {
         search:function (query, callback) {
+            //urlencode query
+            query = encodeURIComponent(query);
             var path =  ['/youtube/v3/search?part=snippet&q=', query, '&key=', config.apiKey, '&maxResults=', config.maxResults].join('');
             options.path = path;
             var req = http.request(options, function(res) {
@@ -22,7 +24,7 @@ module.exports = function (config) {
                     buffer.push(chunk);
                 });
                 res.on('end', function(){
-                    console.log(JSON.parse(buffer.join('')));
+                    console.log(buffer.join(''));
                     callback(null, JSON.parse(buffer.join('')));
                 });
             });
