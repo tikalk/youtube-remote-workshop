@@ -1,10 +1,11 @@
 <div id="player"></div>
+<div class="well">Player Key: <b>{{localKey}}</b></div>
 <div data-ng-show="devMode">
     <input class="form-control" type="text" data-ng-model="videoId" placeholder="VideoId"/>
-    <button class="btn" data-ng-click="play()">Play ></button>
-    <button class="btn" data-ng-click="pause()">||</button>
-    <button class="btn" data-ng-click="volumeUp()">+</button>
-    <button class="btn" data-ng-click="volumeDown()">-</button>
+    <button class="btn" data-ng-click="play()"><span class="glyphicon glyphicon-play"></span></button>
+    <button class="btn" data-ng-click="pause()"><span class="glyphicon glyphicon-pause"></span></button>
+    <button class="btn" data-ng-click="volumeDown()"><span class="glyphicon glyphicon-volume-down"></span></button>
+    <button class="btn" data-ng-click="volumeUp()"><span class="glyphicon glyphicon-volume-up"></span></button>
     <span>Volume: {{volume}}</span>
 </div>
 

@@ -1,3 +1,4 @@
+<input  type="text" class="form-control" data-ng-model="playerId" placeholder="playerId">
 <form  class="form-search" data-ng-submit="searchYoutube()">
     <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Youtube" data-ng-model="searchTerm"/>
@@ -9,8 +10,7 @@
 <div class="results-container">
     <div class="row">
         <div class="thumbnails">
-                <video-item video="video" data-ng-repeat="video in videoItems"></video-item>
-
+                <video-item video="video" data-ng-repeat="video in videoItems" playerId="{{playerId}}"></video-item>
         </div>
     </div>
 </div>

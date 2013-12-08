@@ -7,11 +7,12 @@ function onYouTubeIframeAPIReady() {
 
 
 angular.module('clientApp')
-    .controller('YoutubePlayerCtrl', function ($scope) {
+    .controller('YoutubePlayerCtrl', function ($scope, Socket) {
         $scope.videoId = 'bbEoRnaOIbs';
         $scope.volume = 100;
         $scope.player = null;
         $scope.paused = false;
+
 
         function play(){
             console.log('playing ' + $scope.videoId);
@@ -22,8 +23,7 @@ angular.module('clientApp')
             $scope.paused = false;
             if(!$scope.player){
                 $scope.player = new YT.Player('player', {
-                    height: '390',
-                    width: '640',
+                    width: '100%',
                     videoId: $scope.videoId,
                     events: {
                         'onReady': onPlayerReady,
@@ -41,6 +41,7 @@ angular.module('clientApp')
                 $scope.volume = 100;
             }
             $scope.player.setVolume($scope.volume);
+            $scope.$apply();
         }
 
         function volumeDown(){
@@ -49,6 +50,7 @@ angular.module('clientApp')
                 $scope.volume = 0;
             }
             $scope.player.setVolume($scope.volume);
+            $scope.$apply();
         }
 
         function onPlayerReady(event) {
@@ -75,6 +77,16 @@ angular.module('clientApp')
         $scope.pause = pause;
 
         $scope.devMode = true;
+
+        var socket = Socket.getSocket();
+        socket.on('play', function(data){
+            $scope.videoId = data.videoId;
+            play();
+        });
+
+        socket.on('pause', pause);
+        socket.on('volume-up', volumeUp);
+        socket.on('volume-down', volumeDown);
 
     });
 
