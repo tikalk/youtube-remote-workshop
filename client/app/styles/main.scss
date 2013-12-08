@@ -92,3 +92,21 @@ body {
 .form-control{
   height:33px;
 }
+
+.results-container{
+  padding-top: 10px;
+
+  .img-rounded{
+    width: 100%;
+  }
+  .thumbnail{
+    height: 350px;
+    overflow: hidden;
+  }
+  .button-overlay{
+    opacity: 1;
+  }
+  .glyphicon{
+    font-size: 2.5em;
+  }
+}
