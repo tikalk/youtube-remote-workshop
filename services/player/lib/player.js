@@ -16,20 +16,5 @@ module.exports = function (app, server) {
         res.send('ok');
     });
 
-    var io = require('socket.io').listen(server);
-    var socketUsers = {}
-
-    io.sockets.on('connection', function (socket) {
-        var key = parseInt(Math.random() * 9000 + 1000);
-        console.log('Connecting key: ' + key);
-
-        socket.emit('localKey', key);
-
-        socketUsers[key] = socket;
-
-        socket.on('disconnect', function () {
-            delete socketUsers[key];
-        });
-    });
-
+    
 };
