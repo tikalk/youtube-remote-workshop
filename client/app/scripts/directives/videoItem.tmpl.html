@@ -1,9 +1,12 @@
 
-<div>
+<div class="thumbnail col-md-4 {{nowPlaying(video.id.videoId)}}">
     <h4>{{video.snippet.title}}</h4>
     <a href="#"><span class="glyphicon glyphicon-play"></span></a>
     <a href="#"><span class="glyphicon glyphicon-pause"></span></a>
+    <a href="#"><span class="glyphicon glyphicon-volume-down"></span></a>
+    <a href="#"><span class="glyphicon glyphicon-volume-up"></span></a>
     <a href="#"><span class="glyphicon glyphicon-star"></span></a>
+
     <div class="button-overlay">
         <img src="{{video.snippet.thumbnails.default.url}}" class="img-rounded"/>
     </div>

@@ -1,0 +1,32 @@
+{
+  "name": "player",
+  "version": "0.0.0",
+  "main": "lib/player.js",
+  "description": "The best module ever.",
+  "homepage": "https://github.com//player",
+  "bugs": "https://github.com//player/issues",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//player"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.0",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.0",
+    "jshint-stylish": "~0.1.3"
+  },
+  "dependencies": {
+    "socket.io": "~0.9.16"
+  }
+}

@@ -73,6 +73,11 @@ module.exports = function (grunt) {
                     port:3000
                 },
                 {
+                    context:'/player',
+                    host:'localhost',
+                    port:3000
+                },
+                {
                     context:'/socket.io',
                     host:'localhost',
                     port:3000
