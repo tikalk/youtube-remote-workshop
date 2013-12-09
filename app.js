@@ -20,14 +20,13 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'client', 'dist')));
 });
 
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
 app.get('/search/:q', routes.search);
 
 var server = http.createServer(app).listen(app.get('port'), function(){

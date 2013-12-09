@@ -4,7 +4,7 @@ angular.module('clientApp')
     .directive('videoItem', function ($rootScope, ApiService) {
 
         return {
-            templateUrl:'scripts/directives/videoItem.tmpl.html',
+            templateUrl:'views/videoItem.tmpl.html',
             restrict:'E',
             scope:{
                 video: '=',

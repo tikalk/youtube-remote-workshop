@@ -1,5 +1,5 @@
 var config = {
-    apiKey:'AIzaSyBL6PS3qcjaI4KSCrysejNsFHNQkHtXShs'
+    apiKey:process.env.API_KEY
 };
 
 var youtube = require('../services/youtube/lib/youtube')(config);

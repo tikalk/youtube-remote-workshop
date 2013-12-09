@@ -23,7 +23,7 @@ var youtube = require('../lib/youtube.js');
 */
 
 var config = {
-    apiKey:'AIzaSyBL6PS3qcjaI4KSCrysejNsFHNQkHtXShs'
+    apiKey: process.env.API_KEY
 };
 
 exports.youtube = {

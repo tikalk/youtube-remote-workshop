@@ -24,7 +24,7 @@ module.exports = function (config) {
                     buffer.push(chunk);
                 });
                 res.on('end', function(){
-                    console.log(buffer.join(''));
+                    //console.log(buffer.join(''));
                     callback(null, JSON.parse(buffer.join('')));
                 });
             });
